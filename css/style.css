@@ -26,6 +26,7 @@ p {
   font-weight: 300;
   text-align: left;
   font-size: 20px;
+  margin: 30px 0;
 }
 
 img {
@@ -36,6 +37,29 @@ footer {
   font-size: 14px;
   font-weight: Light 300;
 }
+
+.dark {
+  background: #284fff;
+  color: white;
+}
+
+.dark .container {
+  background: #284fff;
+  box-shadow: rgb(0, 1, 80) 0px 7px 29px 0px;
+}
+
+.dark a:link {
+  color: white;
+}
+
+.dark a:visited {
+  color: white;
+}
+
+.dark a:hover {
+  color: rgba(255, 0, 208, 0.622);
+}
+
 a:link {
   color: #284fff;
 }
@@ -70,6 +94,16 @@ a:hover {
   border-color: #284fff;
 }
 
+.dark .theme-button {
+  color: white;
+  border-color: white;
+}
+.dark .theme-button:hover {
+  color: #284fff;
+  background-color: white;
+  border-color: white;
+}
+
 .container {
   max-width: 600px;
   margin: 30px auto;
@@ -78,13 +112,30 @@ a:hover {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-///
+.intro-pic {
+  margin-top: 20px;
+  transition: all 150ms ease-in-out;
+}
 
-.wrapper {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.intro-pic:hover {
+  filter: grayscale(0);
+  transform: scale(1.3);
+}
+
+.grid {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
+  transition: all 150ms ease-in-out;
+}
+
+.grid img:hover {
+  transform: scale(1.5);
 }
 
 .dive-button {
@@ -125,4 +176,20 @@ a:hover {
 
 .dive-button:hover:after {
   width: 100%;
+}
+
+.dark .dive-button {
+  color: white;
+  border: 1px solid white;
+
+  transition: all 0.35s;
+}
+
+.dark .dive-button:after {
+  background: white;
+  transition: all 0.35s;
+}
+
+.dark .dive-button:hover {
+  color: #284fff;
 }
